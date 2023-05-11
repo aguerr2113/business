@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Architect Website</title>
-    <link rel="stylesheet" href="{{ url_for('serve_static', path='style.css') }}">
-    
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">  
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -214,15 +214,15 @@
       <section class="contact" id="contact">
         <form action="/" method="POST">
           <div class="input-group">
-            <input type="text" class="field" name="full_name">
+            <input type="text" class="field" name="name" id="name">
             <label class="input-label">Full Name</label>
           </div>
           <div class="input-group">
-            <input type="email" class="field" name="email">
+            <input type="email" class="field" name="email" id="email">
             <label class="input-label">Email</label>
           </div>
           <div class="input-group">
-            <textarea class="field" name="message"></textarea>
+            <textarea class="field" name="message" id="message"></textarea>
             <label class="message">Message</label>
           </div>
           <input type="submit" class="submit-btn" value="Submit">
@@ -278,7 +278,7 @@
         <div class="column">
           <div class="content">
             <div class="a-card">
-              <img src="images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
+              <img src="static/images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
               <h1>Lorem ipsum</h1>
               <p class="price">$19.99</p>
               <p>Lorem ipsum dolor sit..</p>
@@ -288,7 +288,7 @@
         <div class="column">
           <div class="content">
             <div class="a-card">
-              <img src="images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
+              <img src="static/images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
               <h1>Lorem ipsum</h1>
               <p class="price">$19.99</p>
               <p>Lorem ipsum dolor sit..</p>
@@ -298,7 +298,7 @@
         <div class="column">
           <div class="content">
             <div class="a-card">
-              <img src="images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
+              <img src="static/images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
               <h1>Lorem ipsum</h1>
               <p class="price">$19.99</p>
               <p>Lorem ipsum dolor sit..</p>
@@ -308,7 +308,7 @@
         <div class="column">
           <div class="content">
             <div class="a-card">
-              <img src="images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
+              <img src="static/images/namroud-gorguis-FZWivbri0Xk-unsplash.jpg" style="width:100%" class="image">
               <h1>Lorem ipsum</h1>
               <p class="price">$19.99</p>
               <p>Lorem ipsum dolor sit..</p>
@@ -340,13 +340,13 @@
         <i class="fas fa-arrow-up"></i>
       </a>
     </div>
-    <script src="{{ url_for('serve_static', path='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script src="{{ url_for('serve_static', path='tilt.js') }}"></script>
     <script src="https://kit.fontawesome.com/014d0c931b.js" crossorigin="anonymous"></script>
   </body>
 </html>
